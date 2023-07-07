@@ -1,8 +1,9 @@
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #121214;
+  color: #cdcdcd;
 }
 
 .centered {
@@ -12,23 +13,20 @@
 .headerText {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .largeFont {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .boldFont {
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
-.container p {
+.content p {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-right: 20px;
   text-align: center;
 }

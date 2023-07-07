@@ -58,7 +58,7 @@ export function Carrinho({ carrinho }) {
 
     const calcularValorTotal = () => {
         return carrinhoAtual.reduce((total, item) => {
-            return total + item.PrecoCarro * item.quantidade;
+            return total + item.preco * item.quantidade;
         }, 0);
     };
 
@@ -69,9 +69,9 @@ export function Carrinho({ carrinho }) {
             <div className={styles.itemsContainer}>
                 {carrinhoAtual.map((item) => (
                     <div key={item.id} className={styles.item}>
-                        <h2 className={styles.itemTitle}>{item.NomeCarro}</h2>
-                        <p className={styles.itemPrice}>Preço: R${item.PrecoCarro}</p>
-                        <p className={styles.itemDesc}>{item.DescCarro}</p>
+                        <h2 className={styles.itemTitle}>{item.nome}</h2>
+                        <p className={styles.itemPrice}>Preço: R${item.preco}</p>
+                        <p className={styles.itemDesc}>{item.descricao}</p>
                         <div className={styles.quantityContainer}>
                             <button
                                 className={styles.quantityButton}

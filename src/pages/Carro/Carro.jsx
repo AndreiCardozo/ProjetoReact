@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from '../../components/Header';
 import carrosData from '../../assets/carros/carros.json';
 import styles from './Carro.module.css';
 import Modal from 'react-modal';
 import { Carrinho } from '../Carrinho/Carrinho';
 import { Footer } from '../../components/Footer';
+import { Button, ButtonGroup } from '@chakra-ui/react';
 
 export function Carro({ carrinho, setCarrinho }) {
     const [carros, setCarros] = useState([]);
@@ -28,12 +29,12 @@ export function Carro({ carrinho, setCarrinho }) {
                 <p>Preço: R${carro.PrecoCarro}</p>
                 <p>{carro.DescCarro}</p>
                 <div className={styles.buttonsContainer}>
-                    <button className={styles.doarButton} onClick={() => adicionarAoCarrinho(carro)}>
-                        Doar
-                    </button>
-                    <button className={styles.detalhesButton} onClick={() => exibirDetalhes(carro)}>
+                    <Button className={styles.doarButton} onClick={() => adicionarAoCarrinho(carro)}>
+                        Adicionar no carrinho
+                    </Button>
+                    <Button className={styles.detalhesButton} onClick={() => exibirDetalhes(carro)}>
                         ?
-                    </button>
+                    </Button>
                 </div>
             </div>
         ));
@@ -74,7 +75,7 @@ export function Carro({ carrinho, setCarrinho }) {
     };
 
     const adicionarAoCarrinho = (carro) => {
-        const novoCarrinho = [...carrinho, { ...carro, quantidade: 1 }];
+        const novoCarrinho = [...carrinho, { id: carro.id, nome: carro.NomeCarro, preco: carro.PrecoCarro, quantidade: 1 }];
         setCarrinho(novoCarrinho);
     };
 

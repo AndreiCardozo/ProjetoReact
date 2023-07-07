@@ -22,6 +22,9 @@ export function Header() {
                                     <Link to="/motos" className={styles.hoverEffect}>
                                         MOTOS
                                     </Link>
+                                    <Link to="/aereo" className={styles.hoverEffect}>
+                                        AEREO
+                                    </Link>
                                     <Link to="/vips" className={styles.hoverEffect}>
                                         VIP
                                     </Link>
