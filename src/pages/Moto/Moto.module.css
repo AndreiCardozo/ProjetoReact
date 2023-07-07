@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+}
+
+.header {
+  width: 20%; /* Defina a largura desejada para o SideBar */
+  border-bottom: 1px #252c38 solid;
+}
+

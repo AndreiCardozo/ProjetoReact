@@ -1,28 +1,67 @@
-import styles from './Sidebar.module.css';
 
-import { PencilLine } from 'phosphor-react'
-import { Avatar } from './Avatar';
+import styles from './SideBar.module.css'
 
-export function Sidebar() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faCaretRight } from '@fortawesome/free-solid-svg-icons'
+
+
+
+export function SideBar() {
+
     return (
-        <aside className={styles.sidebar}>
-            <img
-                className={styles.cover}
-                src='https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50'
-            >
-            </img>
+        <div className={styles.sidebarall} >
+            <div >
+                <ul className={styles.sidebar}>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>INÍCIO</span>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </a>
+                    </li>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>VIPS</span>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </a>
+                    </li>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>CARROS</span>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </a>
+                    </li>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>MOTOS</span>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </a>
+                    </li>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>MANSÕES</span>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </a>
+                    </li>
+                    <li className={styles.lidiv}>
+                        <a className={styles.hoverEffect} href="">
+                            <FontAwesomeIcon icon={faBars} className={styles.icon} />
+                            <span className={styles.sidebarText}>OUTROS
 
-            <div className={styles.profile}>
-                <Avatar src='https://github.com/andreicardozo.png' />
-                <strong>Andrei Cardozo</strong>
-                <span>Desenvolvedor Front-end</span>
+                            </span>
 
+                        </a>
+                        <span className={styles.icon1}>
+                            <FontAwesomeIcon icon={faCaretRight} className={styles.icon1} />
+                        </span>
+                    </li>
+                </ul>
             </div>
-            <footer>
-
-                <a href='#'><PencilLine size={20} />
-                    Editar seu perfil</a>
-            </footer>
-        </aside>
+        </div>
     )
 }
+
